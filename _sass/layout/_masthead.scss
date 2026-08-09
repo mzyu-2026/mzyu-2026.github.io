@@ -85,62 +85,90 @@
    State follows html[data-theme] set by the theme JS; no JS changes needed.
    ========================================================================== */
 
-#theme-toggle a {
-  display: inline-flex;
-  align-items: center;
+#theme-toggle {
+  position: absolute;
+  right: 0;
+  top: 50%;
+  transform: translateY(-50%);
+  display: block;
 
-  &:hover {
-    border-bottom: none;
+  a {
+    display: block;
+    margin: 0;
+    padding: 0;
+
+    &:hover {
+      border-bottom: none;
+    }
   }
 }
 
 .theme-switch {
   position: relative;
-  display: inline-flex;
-  align-items: center;
-  justify-content: space-between;
+  display: block;
   box-sizing: border-box;
-  width: 46px;
-  height: 24px;
-  padding: 0 6px;
-  border-radius: 12px;
-  background-color: var(--global-border-color);
-  border: 1px solid var(--global-dark-border-color);
+  width: 52px;
+  height: 26px;
+  border-radius: 13px;
+  background-color: #dde3e8;
+  border: 1px solid #c6ced5;
   transition: background-color 0.25s ease;
-  vertical-align: middle;
+
+  i {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 12px;
+    line-height: 1;
+  }
 
   .fa-sun {
-    font-size: 11px;
-    line-height: 1;
+    left: 7px;
     color: #e2a03f;
   }
 
   .fa-moon {
-    font-size: 11px;
-    line-height: 1;
-    color: var(--global-text-color-light);
+    right: 7px;
+    color: #8a939c;
   }
 
   &__knob {
     position: absolute;
     top: 2px;
     left: 2px;
-    width: 18px;
-    height: 18px;
+    width: 20px;
+    height: 20px;
     border-radius: 50%;
-    background-color: var(--global-bg-color);
+    background-color: #fff;
     box-shadow: 0 1px 3px rgba(0, 0, 0, 0.35);
     transition: transform 0.25s ease;
   }
 }
 
+html[data-theme="dark"] .theme-switch {
+  background-color: #3d444b;
+  border-color: #565e66;
+
+  &__knob {
+    background-color: #e8eaed;
+  }
+}
+
 html[data-theme="dark"] .theme-switch__knob {
-  transform: translateX(22px);
+  transform: translateX(26px);
 }
 
 @media (prefers-reduced-motion: reduce) {
   .theme-switch,
   .theme-switch__knob {
     transition: none;
+  }
+}
+
+/* Keep the theme switch clear of the greedy-nav overflow (hamburger) button
+   that also sits at right: 0 on narrow screens */
+@media (max-width: 600px) {
+  #theme-toggle {
+    right: 3rem;
   }
 }

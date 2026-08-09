@@ -12,5 +12,6 @@ My name is Meizhi Yu, and I am a PhD student in the [Department of Statistics](h
 My research interests include:
 
 * Statistical machine learning
+* Data selection and subsampling
 * Bioinformatics
 * Large language models
