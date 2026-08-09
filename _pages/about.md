@@ -14,9 +14,3 @@ My research interests include:
 * Statistical machine learning
 * Bioinformatics
 * Large language models
-
-Contact Information
-======
-Email: [Meizhi.Yu@uga.edu](mailto:Meizhi.Yu@uga.edu)
-
-Department of Statistics, University of Georgia, Athens, GA 30602
