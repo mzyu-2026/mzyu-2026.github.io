@@ -1,3 +1,3 @@
 # mzyu-2026.github.io
 
-Personal academic website of Meizhi Yu, built with the AcademicPages template (Jekyll), hosted on GitHub Pages.
+Personal academic website built with the [AcademicPages](https://github.com/academicpages/academicpages.github.io) Jekyll template and hosted on GitHub Pages.
